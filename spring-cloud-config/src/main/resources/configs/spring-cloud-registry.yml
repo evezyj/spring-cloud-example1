@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-cloud-registry
+eureka:
+  client:
+    register-with-eureka: false #不注册服务
+    fetch-registry: false #不拉取服务清单
+    serviceUrl:
+      defaultZone: http://localhost:${server.port}/eureka/
+server:
+  port: 8001

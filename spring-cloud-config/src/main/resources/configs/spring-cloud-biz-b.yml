@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: spring-cloud-biz-b
+server:
+  port: 8011
+
+eureka:
+  client:
+    register-with-eureka: false #不注册服务
+    fetch-registry: false #不拉取服务清单
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 60
+    perfer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}

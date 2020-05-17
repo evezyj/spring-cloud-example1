@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: spring-cloud-config
+  profiles:
+    active: native #start local env configuration file
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/configs/ #configuration file scan folder
+server:
+  port: 8000   #config server port

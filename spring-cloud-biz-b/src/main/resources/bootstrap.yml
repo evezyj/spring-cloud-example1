@@ -1,0 +1,5 @@
+spring:
+  cloud:
+    config:
+      name: spring-cloud-biz-b
+      uri: http://localhost:8000
